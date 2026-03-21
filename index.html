@@ -229,17 +229,18 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
         Parth<br><span class="nacc">Tyagi.</span>
       </h1>
       <div class="hero-role">B.Tech Mathematics &amp; Computing &middot; CUK</div>
-      <p class="hero-desc">Building production-ready ML pipelines — from raw data and feature engineering to deployed Streamlit applications. NLP &middot; Recommendation Systems &middot; Applied AI.</p>
 
-      <!-- FIX: Horizontal badges -->
+      <!-- CHANGE 3: Crisper summary -->
+      <p class="hero-desc">4 deployed AI apps &middot; R²=0.995 &middot; 90%+ accuracy. Full-stack ML engineer — model training, Flask APIs, deployment. NLP &middot; Recommendation Systems &middot; Applied AI.</p>
+
       <div class="hero-badges">
         <span class="badge">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">NLP</span><span class="badge">Streamlit</span><span class="badge">NumPy</span><span class="badge">Pandas</span>
       </div>
 
-      <!-- FIX: Added Resume button + horizontal row -->
+      <!-- CHANGE 1: Resume button now points to PDF in repo root -->
       <div class="hero-cta">
         <a href="https://github.com/parthTyagi-tech" target="_blank" class="btn3d btn3d-dark">GitHub Profile</a>
-        <a href="C:/Users/ASUS/Downloads/c__Copy_%20(4).pdf" download class="btn3d btn3d-green">📄 Resume</a>
+        <a href="Parth_Tyagi_Resume.pdf" target="_blank" class="btn3d btn3d-green">📄 Resume</a>
         <a href="#contact" class="btn3d btn3d-outline">Get In Touch</a>
         <a href="#projects" class="btn3d btn3d-red">View Projects</a>
       </div>
@@ -314,6 +315,14 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
         <div class="p-content"><span class="p-icon">🏋️</span><div class="p-title">AI Fitness Intelligence</div><div class="p-sub">Body fat prediction &middot; Workout planner &middot; XGBoost vs Linear Regression. R²=0.995 &middot; MAE=0.21%</div><div class="p-tags"><span class="ctag">XGBoost</span><span class="ctag">Streamlit</span><span class="ctag">Sklearn</span></div></div>
         <div class="p-foot">Gym Intelligence</div>
       </div>
+
+      <!-- CHANGE 2: New AI Fitness API project card -->
+      <div class="project-card reveal" style="transition-delay:0.08s" onclick="window.open('https://ai-fitness-api-68n1.onrender.com','_blank')">
+        <div class="p-glow"></div><div class="p-border"></div>
+        <div class="p-content"><span class="p-icon">⚡</span><div class="p-title">AI Fitness API</div><div class="p-sub">Full-stack Flask app &middot; Google OAuth &middot; PostgreSQL &middot; 12+ biometric inputs &middot; Dark neumorphic UI &middot; Live on Render</div><div class="p-tags"><span class="ctag">Flask</span><span class="ctag">REST API</span><span class="ctag">PostgreSQL</span><span class="ctag">Three.js</span></div></div>
+        <div class="p-foot">Live Demo ↗</div>
+      </div>
+
       <div class="project-card reveal" style="transition-delay:0.1s" onclick="window.open('https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
         <div class="p-content"><span class="p-icon">🔍</span><div class="p-title">AI Job Skill Analyzer</div><div class="p-sub">NLP skill extraction &middot; Gap analysis &middot; Deployed Streamlit app matching profiles to roles</div><div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Streamlit</span><span class="ctag">Python</span></div></div>
@@ -330,7 +339,6 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
         <div class="p-foot">Sentiment NLP</div>
       </div>
 
-      <!-- NEW: Heart Disease Prediction -->
       <div class="project-card reveal" style="transition-delay:0.25s" onclick="window.open('https://github.com/parthTyagi-tech/Heart-Disease-Prediction','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
         <div class="p-content"><span class="p-icon">❤️</span><div class="p-title">Heart Disease Prediction</div><div class="p-sub">Clinical ML classifier predicting cardiac risk from patient features. Logistic Regression &middot; Random Forest &middot; Feature importance analysis.</div><div class="p-tags"><span class="ctag">Classification</span><span class="ctag">Sklearn</span><span class="ctag">EDA</span></div></div>
@@ -490,16 +498,19 @@ const CMDS={
     {c:'ok',v:'[1] AI Fitness Intelligence System'},
     {c:'val',v:'    XGBoost · Streamlit · R²=0.995'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System',h:'https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System'},
-    {c:'ok',v:'[2] AI Job & Skill Gap Analyzer'},
+    {c:'ok',v:'[2] AI Fitness API — Full-Stack Flask App'},
+    {c:'val',v:'    Flask · PostgreSQL · Google OAuth · Live on Render'},
+    {c:'lnk',v:'    → ai-fitness-api-68n1.onrender.com',h:'https://ai-fitness-api-68n1.onrender.com'},
+    {c:'ok',v:'[3] AI Job & Skill Gap Analyzer'},
     {c:'val',v:'    NLP · Skill matching · Deployed Streamlit'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/AIJobSkillGapAnalyzer',h:'https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer'},
-    {c:'ok',v:'[3] Movie Recommendation System'},
+    {c:'ok',v:'[4] Movie Recommendation System'},
     {c:'val',v:'    TF-IDF · Cosine Similarity · TMDB data'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/Movie-Recommend-System',h:'https://github.com/parthTyagi-tech/Movie-Recommend-System'},
-    {c:'ok',v:'[4] Women\'s Clothing Sentiment'},
+    {c:'ok',v:'[5] Women\'s Clothing Sentiment'},
     {c:'val',v:'    NLP · Sentiment Classification'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/women-cloth-reviews-prediction',h:'https://github.com/parthTyagi-tech/women-cloth-reviews-prediction'},
-    {c:'ok',v:'[5] Heart Disease Prediction'},
+    {c:'ok',v:'[6] Heart Disease Prediction'},
     {c:'val',v:'    Logistic Regression · Random Forest · Clinical Data'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/Heart-Disease-Prediction',h:'https://github.com/parthTyagi-tech/Heart-Disease-Prediction'},
   ]},
@@ -509,7 +520,7 @@ const CMDS={
     {c:'ok',v:'Languages : Python (Advanced) · SQL'},
     {c:'ok',v:'ML Libs   : Scikit-Learn · XGBoost · NumPy · Pandas'},
     {c:'ok',v:'NLP       : TF-IDF · Cosine Similarity · Tokenization'},
-    {c:'ok',v:'Deploy    : Streamlit · Joblib · REST API'},
+    {c:'ok',v:'Deploy    : Streamlit · Flask · REST API · Render'},
     {c:'ok',v:'Tools     : Git · GitHub · Matplotlib · Seaborn'},
     {c:'ok',v:'Methods   : Pipelines · GridSearchCV · Feature Eng.'},
   ]},
@@ -519,8 +530,9 @@ const CMDS={
     {c:'ok',v:'🎓 B.Tech Mathematics & Computing'},
     {c:'val',v:'   Central University of Karnataka'},
     {c:'ok',v:'🎯 Focus: Applied ML · NLP · Recommendation Systems'},
-    {c:'ok',v:'🚀 3x deployed production Streamlit applications'},
+    {c:'ok',v:'🚀 4 deployed production AI applications'},
     {c:'ok',v:'✅ XGBoost pipeline: R²=0.995, MAE=0.21%'},
+    {c:'ok',v:'✅ Full-stack Flask API with Google OAuth + PostgreSQL'},
     {c:'ok',v:'✅ NLP: TF-IDF, cosine similarity, sentiment'},
     {c:'ok',v:'✅ Algos from scratch: Linear, Perceptron, Logistic'},
     {c:'val',v:'──────────────────────────────'},
