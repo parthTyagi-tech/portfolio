@@ -45,7 +45,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .hero-role{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--pop2);letter-spacing:0.12em;margin-top:1rem;opacity:0;animation:fadeUp 0.7s 0.5s forwards}
 .hero-desc{font-size:0.98rem;color:var(--muted);line-height:1.78;margin-top:1.2rem;max-width:460px;opacity:0;animation:fadeUp 0.7s 0.65s forwards}
 
-/* FIX: Badges horizontal flex wrap */
 .hero-badges{
   display:flex;
   flex-direction:row;
@@ -71,7 +70,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .btn3d-outline{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:4px 4px 0 var(--accent)}
 .btn3d-outline:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--accent)}
 .btn3d-outline:active{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--accent)}
-/* Resume button - green accent */
 .btn3d-green{background:#16a34a;color:#fff;box-shadow:0 6px 0 #0a4d22,0 8px 16px rgba(22,163,74,0.3)}
 .btn3d-green:hover{transform:translateY(-4px) rotateX(6deg);box-shadow:0 10px 0 #0a4d22,0 14px 28px rgba(22,163,74,0.35)}
 .btn3d-green:active{transform:translateY(2px);box-shadow:0 2px 0 #0a4d22}
@@ -108,16 +106,27 @@ section{padding:6rem 3rem}
 .reveal{opacity:0;transform:translateY(36px);transition:all 0.75s cubic-bezier(0.16,1,0.3,1)}
 .reveal.visible{opacity:1;transform:none}
 
-/* ABOUT */
+/* =====================
+   ABOUT — HORIZONTAL LAYOUT (CHANGE 2)
+   ===================== */
 #about{background:var(--bg2)}
-.about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:start}
+
+/* Top row: intro text + skills side by side */
+.about-top{display:grid;grid-template-columns:1.15fr 0.85fr;gap:4rem;align-items:start;margin-bottom:2.5rem}
 .about-text p{color:var(--muted);line-height:1.85;margin-bottom:1rem;font-size:0.95rem}
-.about-quote{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:700;color:var(--accent);border-left:3px solid var(--pop);padding-left:1.2rem;margin:1.8rem 0;line-height:1.5;letter-spacing:-0.01em}
+.about-quote{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;color:var(--accent);border-left:3px solid var(--pop);padding-left:1.2rem;margin:1.5rem 0;line-height:1.5;letter-spacing:-0.01em}
+
+/* Buttons inline under text */
+.about-btns{display:flex;gap:1rem;margin-top:1.2rem;flex-wrap:wrap}
+
 .skills-label{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.8rem}
 .skills-cloud{display:flex;flex-wrap:wrap;gap:0.5rem}
 .s-chip{font-family:'JetBrains Mono',monospace;font-size:0.63rem;padding:0.32rem 0.75rem;border:1.5px solid var(--border2);border-radius:4px;color:var(--muted);background:var(--surface);transition:all 0.25s;cursor:default}
 .s-chip:hover{border-color:var(--pop2);color:var(--pop2);transform:translateY(-2px);background:rgba(69,123,157,0.05)}
-.marquee-wrap{overflow:hidden;position:relative;margin-top:2rem}
+
+/* Marquee spans full width below the two columns */
+.about-marquee-row{width:100%}
+.marquee-wrap{overflow:hidden;position:relative;margin-top:0}
 .marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2}
 .marquee-wrap::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}
 .marquee-wrap::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
@@ -130,7 +139,7 @@ section{padding:6rem 3rem}
 /* PROJECTS */
 #projects{background:var(--bg)}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
-.project-card{width:100%;height:230px;background:var(--surface);position:relative;display:grid;place-content:center;border-radius:12px;overflow:hidden;transition:all 0.5s ease-in-out;border:1.5px solid var(--border);cursor:none;box-shadow:0 2px 12px var(--shadow)}
+.project-card{width:100%;height:240px;background:var(--surface);position:relative;display:grid;place-content:center;border-radius:12px;overflow:hidden;transition:all 0.5s ease-in-out;border:1.5px solid var(--border);cursor:none;box-shadow:0 2px 12px var(--shadow)}
 .project-card .p-border{position:absolute;inset:0;border:2px solid var(--pop);opacity:0;transform:rotate(10deg);transition:all 0.5s ease-in-out;border-radius:12px}
 .project-card .p-foot{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-size:8px;text-transform:uppercase;padding:0 8px;color:var(--pop);background:var(--surface);opacity:0;letter-spacing:7px;transition:all 0.5s ease-in-out;font-family:'JetBrains Mono',monospace;white-space:nowrap}
 .project-card .p-content{transition:all 0.5s ease-in-out;text-align:center;padding:1.5rem;position:relative;z-index:2}
@@ -195,7 +204,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   #hero,section{padding:5rem 1.5rem 3rem}
-  .hero-content,.about-grid,.contact-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-content,.about-top,.contact-inner{grid-template-columns:1fr;gap:2.5rem}
   .form-row{grid-template-columns:1fr}
   footer{flex-direction:column;gap:0.5rem;text-align:center}
 }
@@ -223,21 +232,22 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
   <div class="hero-blob"></div>
   <div class="hero-content">
     <div>
-      <div class="hero-eyebrow">Applied ML Engineer &middot; Open to Roles</div>
+      <!-- CHANGE 1: Updated eyebrow -->
+      <div class="hero-eyebrow">Full-Stack AI Engineer &middot; Open to Roles</div>
       <h1 class="hero-name">
         <span class="hi">Hey, I'm</span>
         Parth<br><span class="nacc">Tyagi.</span>
       </h1>
       <div class="hero-role">B.Tech Mathematics &amp; Computing &middot; CUK</div>
 
-      <!-- CHANGE 3: Crisper summary -->
-      <p class="hero-desc">4 deployed AI apps &middot; R²=0.995 &middot; 90%+ accuracy. Full-stack ML engineer — model training, Flask APIs, deployment. NLP &middot; Recommendation Systems &middot; Applied AI.</p>
+      <!-- CHANGE 1: Rewritten summary based on README & projects -->
+      <p class="hero-desc">I build end-to-end AI products that go beyond notebooks — from RAG pipelines and LLM applications to full-stack Flask APIs with auth, databases, and live deployment. 6+ shipped apps &middot; R²=0.995 &middot; 90%+ NLP accuracy &middot; RAG + GPT-4o &middot; Multi-agent AI.</p>
 
+      <!-- CHANGE 1: Updated badges to reflect full stack -->
       <div class="hero-badges">
-        <span class="badge">Python</span><span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">NLP</span><span class="badge">Streamlit</span><span class="badge">NumPy</span><span class="badge">Pandas</span>
+        <span class="badge">Python</span><span class="badge">LangChain</span><span class="badge">OpenAI</span><span class="badge">RAG</span><span class="badge">XGBoost</span><span class="badge">Flask</span><span class="badge">PostgreSQL</span><span class="badge">Pinecone</span><span class="badge">NLP</span><span class="badge">Streamlit</span>
       </div>
 
-      <!-- CHANGE 1: Resume button now points to PDF in repo root -->
       <div class="hero-cta">
         <a href="https://github.com/parthTyagi-tech" target="_blank" class="btn3d btn3d-dark">GitHub Profile</a>
         <a href="https://drive.google.com/file/d/1IWA9lm8x6GuE_INPGuVjQJho4wJuwnIX/view?usp=drive_open" target="_blank" class="btn3d btn3d-green">📄 Resume</a>
@@ -270,80 +280,128 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT — CHANGE 2: Horizontal layout, no vertical stacking -->
 <section id="about">
   <div class="section-inner">
     <div class="section-tag">01 about</div>
     <h2 class="section-title reveal">Who I Am</h2>
     <div class="section-divider"></div>
-    <div class="about-grid">
+
+    <!-- Top row: text left, skills right -->
+    <div class="about-top">
       <div class="about-text reveal">
-        <p>I'm a B.Tech student in Mathematics &amp; Computing with a focused interest in Applied Machine Learning and AI system design. My work centres on building complete, production-ready ML pipelines — from raw data and feature engineering through to model evaluation and live deployment.</p>
-        <p>I value clean code, honest model evaluation, and systems that actually work outside of notebooks. Every project I ship is a fully deployed Streamlit application with reproducible notebooks and professional documentation.</p>
+        <p>I'm a B.Tech student in Mathematics &amp; Computing with a focused passion for Applied AI and full-stack AI engineering. My work spans the entire pipeline — from data preprocessing and model development, through REST APIs and authentication, to production deployment on real servers with real users.</p>
+        <p>I've built RAG pipelines with GPT-4o and Pinecone, multi-agent pricing intelligence platforms, Flask apps with Google OAuth and PostgreSQL, and classical ML systems — all shipped live, not just in notebooks.</p>
         <div class="about-quote">"Build things that work. Document things that last."</div>
-        <p>Currently building towards a career in ML Engineering, with hands-on experience across regression, NLP, and recommendation systems — all deployed as real applications.</p>
-        <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap">
+        <p>Currently open to AI/ML Engineering and GenAI internship roles. Experienced with YBI Foundation, Deloitte Virtual Experience, and TATA GenAI programs.</p>
+        <div class="about-btns">
           <a href="mailto:parthtyagi3389@gmail.com" class="btn3d btn3d-dark" style="font-size:0.68rem;padding:0.6rem 1.3rem">Email Me</a>
           <a href="https://www.linkedin.com/in/tyagiParth" target="_blank" class="btn3d btn3d-outline" style="font-size:0.68rem;padding:0.6rem 1.3rem">LinkedIn</a>
         </div>
       </div>
+
       <div class="reveal" style="transition-delay:0.12s">
         <div class="skills-label">Core Skills</div>
         <div class="skills-cloud">
-          <span class="s-chip">Python &middot; Advanced</span><span class="s-chip">Scikit-Learn</span><span class="s-chip">XGBoost</span><span class="s-chip">NLP &middot; TF-IDF</span><span class="s-chip">Pandas &middot; NumPy</span><span class="s-chip">Streamlit</span><span class="s-chip">ML Pipelines</span><span class="s-chip">GridSearchCV</span><span class="s-chip">Cosine Similarity</span><span class="s-chip">Matplotlib &middot; Seaborn</span><span class="s-chip">SQL</span><span class="s-chip">Git &middot; GitHub</span><span class="s-chip">Feature Engineering</span><span class="s-chip">EDA</span>
-        </div>
-        <div class="marquee-wrap">
-          <div class="marquee-track">
-            <span class="m-pill">Python</span><span class="m-pill">XGBoost</span><span class="m-pill">NLP</span><span class="m-pill">Streamlit</span><span class="m-pill">NumPy</span><span class="m-pill">Pandas</span><span class="m-pill">Sklearn</span><span class="m-pill">GridSearchCV</span><span class="m-pill">Seaborn</span><span class="m-pill">Git</span><span class="m-pill">REST API</span><span class="m-pill">Joblib</span><span class="m-pill">EDA</span><span class="m-pill">Feature Eng.</span>
-            <span class="m-pill">Python</span><span class="m-pill">XGBoost</span><span class="m-pill">NLP</span><span class="m-pill">Streamlit</span><span class="m-pill">NumPy</span><span class="m-pill">Pandas</span><span class="m-pill">Sklearn</span><span class="m-pill">GridSearchCV</span><span class="m-pill">Seaborn</span><span class="m-pill">Git</span><span class="m-pill">REST API</span><span class="m-pill">Joblib</span><span class="m-pill">EDA</span><span class="m-pill">Feature Eng.</span>
-          </div>
+          <span class="s-chip">Python &middot; Advanced</span>
+          <span class="s-chip">LangChain &middot; RAG</span>
+          <span class="s-chip">OpenAI API</span>
+          <span class="s-chip">Pinecone</span>
+          <span class="s-chip">Flask &middot; REST API</span>
+          <span class="s-chip">PostgreSQL</span>
+          <span class="s-chip">Google OAuth</span>
+          <span class="s-chip">XGBoost</span>
+          <span class="s-chip">Scikit-Learn</span>
+          <span class="s-chip">NLP &middot; TF-IDF</span>
+          <span class="s-chip">Pandas &middot; NumPy</span>
+          <span class="s-chip">Streamlit</span>
+          <span class="s-chip">React &middot; JS</span>
+          <span class="s-chip">Render &middot; Vercel</span>
+          <span class="s-chip">Git &middot; GitHub</span>
+          <span class="s-chip">Feature Engineering</span>
+          <span class="s-chip">EDA</span>
+          <span class="s-chip">GridSearchCV</span>
         </div>
       </div>
     </div>
+
+    <!-- Marquee spans full width below -->
+    <div class="about-marquee-row reveal" style="transition-delay:0.2s">
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span class="m-pill">Python</span><span class="m-pill">LangChain</span><span class="m-pill">OpenAI</span><span class="m-pill">Pinecone</span><span class="m-pill">RAG</span><span class="m-pill">Flask</span><span class="m-pill">PostgreSQL</span><span class="m-pill">XGBoost</span><span class="m-pill">NLP</span><span class="m-pill">Streamlit</span><span class="m-pill">React</span><span class="m-pill">Sklearn</span><span class="m-pill">GridSearchCV</span><span class="m-pill">Seaborn</span><span class="m-pill">Git</span><span class="m-pill">REST API</span><span class="m-pill">Joblib</span><span class="m-pill">EDA</span><span class="m-pill">Feature Eng.</span><span class="m-pill">OAuth</span>
+          <span class="m-pill">Python</span><span class="m-pill">LangChain</span><span class="m-pill">OpenAI</span><span class="m-pill">Pinecone</span><span class="m-pill">RAG</span><span class="m-pill">Flask</span><span class="m-pill">PostgreSQL</span><span class="m-pill">XGBoost</span><span class="m-pill">NLP</span><span class="m-pill">Streamlit</span><span class="m-pill">React</span><span class="m-pill">Sklearn</span><span class="m-pill">GridSearchCV</span><span class="m-pill">Seaborn</span><span class="m-pill">Git</span><span class="m-pill">REST API</span><span class="m-pill">Joblib</span><span class="m-pill">EDA</span><span class="m-pill">Feature Eng.</span><span class="m-pill">OAuth</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS — CHANGE 3: Added MediBot and Dynamic Pricing -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-tag">02 projects</div>
     <h2 class="section-title reveal">Featured Work</h2>
     <div class="section-divider"></div>
     <div class="projects-grid">
-      <div class="project-card reveal" style="transition-delay:0.05s" onclick="window.open('https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System','_blank')">
-        <div class="p-glow"></div><div class="p-border"></div>
-        <div class="p-content"><span class="p-icon"></span><div class="p-title">AI Fitness Intelligence</div><div class="p-sub">Body fat prediction &middot; Workout planner &middot; XGBoost vs Linear Regression. R²=0.995 &middot; MAE=0.21%</div><div class="p-tags"><span class="ctag">XGBoost</span><span class="ctag">Streamlit</span><span class="ctag">Sklearn</span></div></div>
-        <div class="p-foot">Gym Intelligence</div>
-      </div>
 
-      <!-- CHANGE 2: New AI Fitness API project card -->
-      <div class="project-card reveal" style="transition-delay:0.08s" onclick="window.open('https://ai-fitness-api-68n1.onrender.com','_blank')">
+      <!-- NEW: MediBot -->
+      <div class="project-card reveal" style="transition-delay:0.02s" onclick="window.open('https://github.com/parthTyagi-tech/medibot','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
-        <div class="p-content"><span class="p-icon"></span><div class="p-title">AI Fitness API</div><div class="p-sub">Full-stack Flask app &middot; Google OAuth &middot; PostgreSQL &middot; 12+ biometric inputs &middot; Dark neumorphic UI &middot; Live on Render</div><div class="p-tags"><span class="ctag">Flask</span><span class="ctag">REST API</span><span class="ctag">PostgreSQL</span><span class="ctag">Three.js</span></div></div>
+        <div class="p-content"><span class="p-icon">🏥</span><div class="p-title">MediBot — AI Medical Chatbot</div><div class="p-sub">RAG + GPT-4o + Pinecone &middot; 9,076 medical chunks &middot; Semantic top-3 retrieval &middot; Flask + Gunicorn &middot; Live on Render</div><div class="p-tags"><span class="ctag">RAG</span><span class="ctag">GPT-4o</span><span class="ctag">Pinecone</span><span class="ctag">LangChain</span><span class="ctag">Flask</span></div></div>
         <div class="p-foot">Live Demo ↗</div>
       </div>
 
-      <div class="project-card reveal" style="transition-delay:0.1s" onclick="window.open('https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer','_blank')">
+      <!-- NEW: Dynamic Pricing -->
+      <div class="project-card reveal" style="transition-delay:0.05s" onclick="window.open('https://github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
-        <div class="p-content"><span class="p-icon"></span><div class="p-title">AI Job Skill Analyzer</div><div class="p-sub">NLP skill extraction &middot; Gap analysis &middot; Deployed Streamlit app matching profiles to roles</div><div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Streamlit</span><span class="ctag">Python</span></div></div>
+        <div class="p-content"><span class="p-icon">💰</span><div class="p-title">Dynamic Pricing Intelligence</div><div class="p-sub">Multi-agent AI &middot; 10+ backend APIs &middot; LLM pricing recommendations &middot; Real-time analytics &middot; Flask + React &middot; Deployed Render + Vercel</div><div class="p-tags"><span class="ctag">Multi-Agent</span><span class="ctag">LLM</span><span class="ctag">React</span><span class="ctag">Flask</span><span class="ctag">PostgreSQL</span></div></div>
+        <div class="p-foot">View Repo ↗</div>
+      </div>
+
+      <!-- Existing: AI Fitness Intelligence -->
+      <div class="project-card reveal" style="transition-delay:0.08s" onclick="window.open('https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System','_blank')">
+        <div class="p-glow"></div><div class="p-border"></div>
+        <div class="p-content"><span class="p-icon">💪</span><div class="p-title">AI Fitness Intelligence</div><div class="p-sub">Body fat prediction &middot; Workout planner &middot; XGBoost vs Linear Regression &middot; R²=0.995 &middot; MAE=0.21%</div><div class="p-tags"><span class="ctag">XGBoost</span><span class="ctag">Streamlit</span><span class="ctag">Sklearn</span></div></div>
+        <div class="p-foot">Gym Intelligence</div>
+      </div>
+
+      <!-- Existing: AI Fitness API -->
+      <div class="project-card reveal" style="transition-delay:0.11s" onclick="window.open('https://ai-fitness-api-68n1.onrender.com','_blank')">
+        <div class="p-glow"></div><div class="p-border"></div>
+        <div class="p-content"><span class="p-icon">🔐</span><div class="p-title">AI Fitness API</div><div class="p-sub">Full-stack Flask app &middot; Google OAuth &middot; PostgreSQL &middot; 12+ biometric inputs &middot; Referral system &middot; Live on Render</div><div class="p-tags"><span class="ctag">Flask</span><span class="ctag">REST API</span><span class="ctag">PostgreSQL</span><span class="ctag">OAuth</span></div></div>
+        <div class="p-foot">Live Demo ↗</div>
+      </div>
+
+      <!-- Existing: AI Job Skill Analyzer -->
+      <div class="project-card reveal" style="transition-delay:0.14s" onclick="window.open('https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer','_blank')">
+        <div class="p-glow"></div><div class="p-border"></div>
+        <div class="p-content"><span class="p-icon">🎯</span><div class="p-title">AI Job Skill Analyzer</div><div class="p-sub">NLP skill extraction &middot; 90% match accuracy &middot; TF-IDF + cosine similarity &middot; Gap analysis &middot; Deployed Streamlit</div><div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Streamlit</span><span class="ctag">TF-IDF</span></div></div>
         <div class="p-foot">Skill Gap AI</div>
       </div>
-      <div class="project-card reveal" style="transition-delay:0.15s" onclick="window.open('https://github.com/parthTyagi-tech/Movie-Recommend-System','_blank')">
+
+      <!-- Existing: Movie Recommender -->
+      <div class="project-card reveal" style="transition-delay:0.17s" onclick="window.open('https://github.com/parthTyagi-tech/Movie-Recommend-System','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
-        <div class="p-content"><span class="p-icon"></span><div class="p-title">Movie Recommender</div><div class="p-sub">Content-based filtering via TF-IDF + cosine similarity on TMDB metadata. Live top-N recommendations.</div><div class="p-tags"><span class="ctag">TF-IDF</span><span class="ctag">Cosine Sim</span><span class="ctag">Streamlit</span></div></div>
+        <div class="p-content"><span class="p-icon">🎬</span><div class="p-title">Movie Recommender</div><div class="p-sub">Content-based filtering via TF-IDF + cosine similarity on TMDB metadata. Live top-N recommendations.</div><div class="p-tags"><span class="ctag">TF-IDF</span><span class="ctag">Cosine Sim</span><span class="ctag">Streamlit</span></div></div>
         <div class="p-foot">Movie Rec System</div>
       </div>
+
+      <!-- Existing: Women Cloth Sentiment -->
       <div class="project-card reveal" style="transition-delay:0.2s" onclick="window.open('https://github.com/parthTyagi-tech/women-cloth-reviews-prediction','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
-        <div class="p-content"><span class="p-icon"></span><div class="p-title">Women's Cloth Sentiment</div><div class="p-sub">NLP-based positive/negative review classification on women's fashion data. Retail-ready prediction pipeline.</div><div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Sentiment</span><span class="ctag">Classification</span></div></div>
+        <div class="p-content"><span class="p-icon">👗</span><div class="p-title">Women's Cloth Sentiment</div><div class="p-sub">NLP-based positive/negative review classification on women's fashion data. Retail-ready prediction pipeline.</div><div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Sentiment</span><span class="ctag">Classification</span></div></div>
         <div class="p-foot">Sentiment NLP</div>
       </div>
 
-      <div class="project-card reveal" style="transition-delay:0.25s" onclick="window.open('https://github.com/parthTyagi-tech/Heart-Disease-Prediction','_blank')">
+      <!-- Existing: Heart Disease Prediction -->
+      <div class="project-card reveal" style="transition-delay:0.23s" onclick="window.open('https://github.com/parthTyagi-tech/Heart-Disease-Prediction','_blank')">
         <div class="p-glow"></div><div class="p-border"></div>
-        <div class="p-content"><span class="p-icon"></span><div class="p-title">Heart Disease Prediction</div><div class="p-sub">Clinical ML classifier predicting cardiac risk from patient features. Logistic Regression &middot; Random Forest &middot; Feature importance analysis.</div><div class="p-tags"><span class="ctag">Classification</span><span class="ctag">Sklearn</span><span class="ctag">EDA</span></div></div>
+        <div class="p-content"><span class="p-icon">❤️</span><div class="p-title">Heart Disease Prediction</div><div class="p-sub">Clinical ML classifier predicting cardiac risk. Logistic Regression &middot; Random Forest &middot; Feature importance analysis.</div><div class="p-tags"><span class="ctag">Classification</span><span class="ctag">Sklearn</span><span class="ctag">EDA</span></div></div>
         <div class="p-foot">Cardiac Risk AI</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -399,7 +457,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
     <div class="contact-inner">
       <div class="contact-left reveal">
         <div class="big-text">Let's <em>Build</em><br>Together.</div>
-        <p>Open to ML Engineering roles, research collaborations, and interesting AI projects. Let's collaborate — open to internships and product work.</p>
+        <p>Open to AI/ML Engineering roles, GenAI internships, research collaborations, and interesting AI projects. Let's collaborate — from RAG pipelines to full-stack AI products.</p>
         <div style="margin-top:1.5rem">
           <div class="contact-info-item"><span style="font-size:1.1rem">📧</span> parthtyagi3389@gmail.com</div>
           <div class="contact-info-item"><span style="font-size:1.1rem">📍</span> Central University of Karnataka, India</div>
@@ -482,7 +540,7 @@ const CMDS={
   help:{fn:()=>[
     {c:'key',v:'Available Commands'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'kv',k:'projects ',v:'→ list all ML projects'},
+    {c:'kv',k:'projects ',v:'→ list all AI/ML projects'},
     {c:'kv',k:'resume   ',v:'→ resume & achievements'},
     {c:'kv',k:'skills   ',v:'→ full tech stack'},
     {c:'kv',k:'contact  ',v:'→ get contact info'},
@@ -493,50 +551,56 @@ const CMDS={
     {c:'kv',k:'clear    ',v:'→ clear terminal'},
   ]},
   projects:{fn:()=>[
-    {c:'key',v:' Featured Projects'},
+    {c:'key',v:'🚀 Featured Projects'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'ok',v:'[1] AI Fitness Intelligence System'},
-    {c:'val',v:'    XGBoost · Streamlit · R²=0.995'},
-    {c:'lnk',v:'    → github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System',h:'https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System'},
-    {c:'ok',v:'[2] AI Fitness API — Full-Stack Flask App'},
-    {c:'val',v:'    Flask · PostgreSQL · Google OAuth · Live on Render'},
+    {c:'ok',v:'[1] MediBot — AI Medical Chatbot'},
+    {c:'val',v:'    RAG + GPT-4o + Pinecone · 9,076 medical chunks · Flask · Live on Render'},
+    {c:'lnk',v:'    → github.com/parthTyagi-tech/medibot',h:'https://github.com/parthTyagi-tech/medibot'},
+    {c:'ok',v:'[2] Dynamic Pricing Intelligence Platform'},
+    {c:'val',v:'    Multi-agent AI · 10+ APIs · LLM pricing · Flask + React · Render + Vercel'},
+    {c:'lnk',v:'    → github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform',h:'https://github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform'},
+    {c:'ok',v:'[3] AI Fitness API — Full-Stack Flask App'},
+    {c:'val',v:'    Flask · PostgreSQL · Google OAuth · Referral system · Live on Render'},
     {c:'lnk',v:'    → ai-fitness-api-68n1.onrender.com',h:'https://ai-fitness-api-68n1.onrender.com'},
-    {c:'ok',v:'[3] AI Job & Skill Gap Analyzer'},
-    {c:'val',v:'    NLP · Skill matching · Deployed Streamlit'},
+    {c:'ok',v:'[4] AI Fitness Intelligence System'},
+    {c:'val',v:'    XGBoost · Streamlit · R²=0.995, MAE=0.21%'},
+    {c:'lnk',v:'    → github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System',h:'https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System'},
+    {c:'ok',v:'[5] AI Job & Skill Gap Analyzer'},
+    {c:'val',v:'    NLP · TF-IDF · 90% match accuracy · Deployed Streamlit'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/AIJobSkillGapAnalyzer',h:'https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer'},
-    {c:'ok',v:'[4] Movie Recommendation System'},
+    {c:'ok',v:'[6] Movie Recommendation System'},
     {c:'val',v:'    TF-IDF · Cosine Similarity · TMDB data'},
     {c:'lnk',v:'    → github.com/parthTyagi-tech/Movie-Recommend-System',h:'https://github.com/parthTyagi-tech/Movie-Recommend-System'},
-    {c:'ok',v:'[5] Women\'s Clothing Sentiment'},
-    {c:'val',v:'    NLP · Sentiment Classification'},
-    {c:'lnk',v:'    → github.com/parthTyagi-tech/women-cloth-reviews-prediction',h:'https://github.com/parthTyagi-tech/women-cloth-reviews-prediction'},
-    {c:'ok',v:'[6] Heart Disease Prediction'},
-    {c:'val',v:'    Logistic Regression · Random Forest · Clinical Data'},
-    {c:'lnk',v:'    → github.com/parthTyagi-tech/Heart-Disease-Prediction',h:'https://github.com/parthTyagi-tech/Heart-Disease-Prediction'},
+    {c:'ok',v:'[7] Women\'s Clothing Sentiment · [8] Heart Disease Prediction'},
+    {c:'lnk',v:'    → github.com/parthTyagi-tech',h:'https://github.com/parthTyagi-tech'},
   ]},
   skills:{fn:()=>[
     {c:'key',v:'🛠 Tech Stack'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'ok',v:'Languages : Python (Advanced) · SQL'},
-    {c:'ok',v:'ML Libs   : Scikit-Learn · XGBoost · NumPy · Pandas'},
+    {c:'ok',v:'AI/LLM    : OpenAI API · LangChain · RAG · Pinecone · GPT-4o'},
+    {c:'ok',v:'ML Libs   : Scikit-Learn · XGBoost · TensorFlow · PyTorch'},
+    {c:'ok',v:'Languages : Python (Advanced) · JavaScript · TypeScript · SQL'},
+    {c:'ok',v:'Backend   : Flask · PostgreSQL · SQLAlchemy · JWT · Google OAuth'},
+    {c:'ok',v:'Frontend  : React · Streamlit · Three.js'},
     {c:'ok',v:'NLP       : TF-IDF · Cosine Similarity · Tokenization'},
-    {c:'ok',v:'Deploy    : Streamlit · Flask · REST API · Render'},
-    {c:'ok',v:'Tools     : Git · GitHub · Matplotlib · Seaborn'},
-    {c:'ok',v:'Methods   : Pipelines · GridSearchCV · Feature Eng.'},
+    {c:'ok',v:'Deploy    : Render · Vercel · AWS · Gunicorn'},
+    {c:'ok',v:'Tools     : Git · GitHub · Postman · Matplotlib · Seaborn'},
   ]},
   resume:{fn:()=>[
     {c:'key',v:'📄 Parth Tyagi — Resume'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'ok',v:' B.Tech Mathematics & Computing'},
-    {c:'val',v:'   Central University of Karnataka'},
-    {c:'ok',v:' Focus: Applied ML · NLP · Recommendation Systems'},
-    {c:'ok',v:' 4 deployed production AI applications'},
-    {c:'ok',v:'✅ XGBoost pipeline: R²=0.995, MAE=0.21%'},
-    {c:'ok',v:'✅ Full-stack Flask API with Google OAuth + PostgreSQL'},
-    {c:'ok',v:'✅ NLP: TF-IDF, cosine similarity, sentiment'},
+    {c:'ok',v:'🎓 B.Tech Mathematics & Computing — Central University of Karnataka'},
+    {c:'ok',v:'🏢 YBI Foundation Intern'},
+    {c:'ok',v:'🏢 Deloitte Virtual Experience Program'},
+    {c:'ok',v:'🏢 TATA GenAI Virtual Experience'},
+    {c:'val',v:'──────────────────────────────'},
+    {c:'ok',v:'✅ MediBot: RAG + GPT-4o + Pinecone, 9,076 medical chunks'},
+    {c:'ok',v:'✅ Dynamic Pricing: Multi-agent AI, 10+ APIs, Flask + React'},
+    {c:'ok',v:'✅ AI Fitness API: XGBoost R²=0.995, Google OAuth, PostgreSQL'},
+    {c:'ok',v:'✅ NLP: TF-IDF, cosine similarity, 90% match accuracy'},
     {c:'ok',v:'✅ Algos from scratch: Linear, Perceptron, Logistic'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'key',v:'📌 Status: Open to ML Engineering roles'},
+    {c:'key',v:'📌 Status: Open to AI/ML Engineer & GenAI Intern roles'},
     {c:'lnk',v:'   📧 parthtyagi3389@gmail.com',h:'mailto:parthtyagi3389@gmail.com'},
   ]},
   contact:{fn:()=>[
@@ -559,13 +623,14 @@ const CMDS={
     {c:'val',v:'All built with NumPy only. No sklearn.'},
   ]},
   about:{fn:()=>[
-    {c:'key',v:' About Parth Tyagi'},
+    {c:'key',v:'👋 About Parth Tyagi'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'ok',v:'Applied ML Engineer building production-ready pipelines.'},
+    {c:'ok',v:'Full-Stack AI Engineer — RAG, LLMs, ML, deployed APIs.'},
     {c:'val',v:'"Build things that work. Document things that last."'},
-    {c:'ok',v:'→ Data → Model → Deploy is my workflow.'},
-    {c:'ok',v:'→ NLP, Recommendation Systems, Regression — all shipped.'},
-    {c:'ok',v:'→ Open to ML Engineering roles and research collab.'},
+    {c:'ok',v:'→ Data → Model → API → Deploy is my workflow.'},
+    {c:'ok',v:'→ RAG, Multi-agent AI, NLP, Recommendation Systems — all shipped live.'},
+    {c:'ok',v:'→ Open to AI/ML Engineering roles and GenAI internships.'},
+    {c:'ok',v:'→ Experience: YBI Foundation, Deloitte, TATA GenAI.'},
   ]},
   github:{fn:()=>{window.open('https://github.com/parthTyagi-tech','_blank');return[{c:'ok',v:'Opening GitHub profile...'}]}},
   linkedin:{fn:()=>{window.open('https://www.linkedin.com/in/tyagiParth','_blank');return[{c:'ok',v:'Opening LinkedIn...'}]}},
