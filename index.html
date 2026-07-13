@@ -136,8 +136,20 @@ section{padding:6rem 3rem}
 .m-pill{font-family:'JetBrains Mono',monospace;font-size:0.63rem;padding:0.38rem 0.85rem;border:1.5px solid var(--border2);border-radius:50px;color:var(--muted);background:var(--surface);white-space:nowrap;transition:all 0.25s}
 .m-pill:hover{border-color:var(--accent);color:var(--accent)}
 
+/* EXPERIENCE */
+.exp-grid{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
+.exp-card{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:2rem;position:relative;transition:all 0.4s;cursor:none}
+.exp-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 30px var(--shadow2)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:1rem}
+.exp-title{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;color:var(--ink)}
+.exp-company{font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--pop);margin-top:0.2rem}
+.exp-date{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted);background:var(--surface2);padding:0.3rem 0.6rem;border-radius:4px;border:1px solid var(--border2)}
+.exp-desc{font-size:0.9rem;color:var(--muted);line-height:1.7}
+.exp-desc ul{padding-left:1.2rem;margin-top:0.5rem}
+.exp-desc li{margin-bottom:0.4rem}
+
 /* PROJECTS */
-#projects{background:var(--bg)}
+#projects{background:var(--bg2)}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
 .project-card{width:100%;height:240px;background:var(--surface);position:relative;display:grid;place-content:center;border-radius:12px;overflow:hidden;transition:all 0.5s ease-in-out;border:1.5px solid var(--border);cursor:none;box-shadow:0 2px 12px var(--shadow)}
 .project-card .p-border{position:absolute;inset:0;border:2px solid var(--pop);opacity:0;transform:rotate(10deg);transition:all 0.5s ease-in-out;border-radius:12px}
@@ -157,7 +169,7 @@ section{padding:6rem 3rem}
 .project-card:hover .p-glow{opacity:1}
 
 /* ALGOS */
-#algos{background:var(--bg2)}
+#algos{background:var(--bg)}
 .algos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:2rem}
 .algo-card{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1.6rem;position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);cursor:none}
 .algo-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--pop),var(--pop2));transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
@@ -171,7 +183,7 @@ section{padding:6rem 3rem}
 .algo-link:hover{gap:0.8rem}
 
 /* CONTACT */
-#contact{background:var(--bg)}
+#contact{background:var(--bg2)}
 .contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
 .big-text{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-0.02em}
 .big-text em{color:var(--pop);font-style:normal}
@@ -220,6 +232,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
   <div class="nav-logo"><em>~/</em>parth-tyagi</div>
   <ul class="nav-links">
     <li><a href="#about">about</a></li>
+    <li><a href="#experience">experience</a></li>
     <li><a href="#projects">projects</a></li>
     <li><a href="#algos">algos</a></li>
     <li><a href="#contact">contact</a></li>
@@ -274,7 +287,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
           <input class="t-input" id="tInput" type="text" placeholder="type a command..." autocomplete="off" spellcheck="false"/>
           <span class="t-blink"></span>
         </div>
-        <div class="t-hint">try: help &middot; projects &middot; resume &middot; skills &middot; contact &middot; algos &middot; github &middot; clear</div>
+        <div class="t-hint">try: help &middot; experience &middot; projects &middot; resume &middot; skills &middot; contact &middot; algos &middot; github &middot; clear</div>
       </div>
     </div>
   </div>
@@ -338,10 +351,67 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--bg)">
+  <div class="section-inner">
+    <div class="section-tag">02 experience</div>
+    <h2 class="section-title reveal">Where I've Worked</h2>
+    <div class="section-divider"></div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Full-Stack Engineer Intern</div>
+            <div class="exp-company">Intellexia Tech Pvt. Ltd.</div>
+          </div>
+          <div class="exp-date">28 May – Present</div>
+        </div>
+        <div class="exp-desc">
+          <ul>
+            <li>Built and deployed Transpera’s AI video dubbing platform (FastAPI + React/Vite), integrating HeyGen API with Google Cloud Tasks.</li>
+            <li>Refactored backend to production standards with Google Cloud Storage, structured logging, signed URLs, and Dockerized CI/CD.</li>
+            <li>Implementing real-time multilingual voice chat for Transpera’s Chatbot-as-a-Service within a LangGraph state-machine backed by Vertex AI RAG.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-card reveal" style="transition-delay:0.1s">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Machine Learning Intern</div>
+            <div class="exp-company">YBI Foundation</div>
+          </div>
+          <div class="exp-date">May 2025 – July 2025</div>
+        </div>
+        <div class="exp-desc">
+          <ul>
+            <li>Designed and deployed end-to-end ML pipelines improving model workflow efficiency by 30%.</li>
+            <li>Boosted model accuracy to 75–85% through structured preprocessing, optimization, and cross-validation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-card reveal" style="transition-delay:0.2s">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Data Analytics Virtual Experience</div>
+            <div class="exp-company">Deloitte / TATA GenAI</div>
+          </div>
+          <div class="exp-date">June 2025</div>
+        </div>
+        <div class="exp-desc">
+          <ul>
+            <li>Conducted EDA on simulated enterprise datasets (10K+ records) to support forensic analytics investigations.</li>
+            <li>Applied Gen-AI-driven analytics to evaluate financial risk indicators, improving risk identification accuracy by 20%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS — CHANGE 3: Added MediBot and Dynamic Pricing -->
 <section id="projects">
   <div class="section-inner">
-    <div class="section-tag">02 projects</div>
+    <div class="section-tag">03 projects</div>
     <h2 class="section-title reveal">Featured Work</h2>
     <div class="section-divider"></div>
     <div class="projects-grid">
@@ -409,7 +479,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
 <!-- ALGOS FROM SCRATCH -->
 <section id="algos">
   <div class="section-inner">
-    <div class="section-tag">03 algorithms</div>
+    <div class="section-tag">04 algorithms</div>
     <h2 class="section-title reveal">Algos <em style="color:var(--pop);font-style:normal">From Scratch</em></h2>
     <div class="section-divider"></div>
     <p class="reveal" style="color:var(--muted);max-width:520px;line-height:1.75;font-size:0.95rem">Hand-coded ML algorithms using only NumPy — no sklearn shortcuts. Pure math, pure understanding.</p>
@@ -451,7 +521,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
-    <div class="section-tag">04 contact</div>
+    <div class="section-tag">05 contact</div>
     <h2 class="section-title reveal">Get In Touch</h2>
     <div class="section-divider"></div>
     <div class="contact-inner">
@@ -540,6 +610,7 @@ const CMDS={
   help:{fn:()=>[
     {c:'key',v:'Available Commands'},
     {c:'val',v:'──────────────────────────────'},
+    {c:'kv',k:'experience',v:'→ view work experience'},
     {c:'kv',k:'projects ',v:'→ list all AI/ML projects'},
     {c:'kv',k:'resume   ',v:'→ resume & achievements'},
     {c:'kv',k:'skills   ',v:'→ full tech stack'},
@@ -549,6 +620,18 @@ const CMDS={
     {c:'kv',k:'github   ',v:'→ open GitHub profile'},
     {c:'kv',k:'linkedin ',v:'→ open LinkedIn'},
     {c:'kv',k:'clear    ',v:'→ clear terminal'},
+  ]},
+  experience:{fn:()=>[
+    {c:'key',v:' Work Experience'},
+    {c:'val',v:'──────────────────────────────'},
+    {c:'ok',v:'[1] Full-Stack Engineer Intern @ Intellexia Tech Pvt. Ltd.'},
+    {c:'val',v:'    FastAPI · React · Google Cloud · HeyGen API'},
+    {c:'ok',v:'[2] Machine Learning Intern @ YBI Foundation'},
+    {c:'val',v:'    ML Pipelines · Model Optimization'},
+    {c:'ok',v:'[3] Data Analytics Virtual Exp @ Deloitte'},
+    {c:'val',v:'    EDA · Forensic Analytics'},
+    {c:'ok',v:'[4] GenAI Analytics Virtual Exp @ TATA'},
+    {c:'val',v:'    Gen-AI Analytics · Financial Risk'},
   ]},
   projects:{fn:()=>[
     {c:'key',v:'🚀 Featured Projects'},
@@ -590,6 +673,7 @@ const CMDS={
     {c:'key',v:'📄 Parth Tyagi — Resume'},
     {c:'val',v:'──────────────────────────────'},
     {c:'ok',v:'🎓 B.Tech Mathematics & Computing — Central University of Karnataka'},
+    {c:'ok',v:'🏢 Intellexia Tech Pvt. Ltd. Intern'},
     {c:'ok',v:'🏢 YBI Foundation Intern'},
     {c:'ok',v:'🏢 Deloitte Virtual Experience Program'},
     {c:'ok',v:'🏢 TATA GenAI Virtual Experience'},
@@ -630,7 +714,7 @@ const CMDS={
     {c:'ok',v:'→ Data → Model → API → Deploy is my workflow.'},
     {c:'ok',v:'→ RAG, Multi-agent AI, NLP, Recommendation Systems — all shipped live.'},
     {c:'ok',v:'→ Open to AI/ML Engineering roles and GenAI internships.'},
-    {c:'ok',v:'→ Experience: YBI Foundation, Deloitte, TATA GenAI.'},
+    {c:'ok',v:'→ Experience: Intellexia Tech, YBI Foundation, Deloitte, TATA GenAI.'},
   ]},
   github:{fn:()=>{window.open('https://github.com/parthTyagi-tech','_blank');return[{c:'ok',v:'Opening GitHub profile...'}]}},
   linkedin:{fn:()=>{window.open('https://www.linkedin.com/in/tyagiParth','_blank');return[{c:'ok',v:'Opening LinkedIn...'}]}},
