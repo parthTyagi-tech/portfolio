@@ -263,7 +263,7 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
 
       <div class="hero-cta">
         <a href="https://github.com/parthTyagi-tech" target="_blank" class="btn3d btn3d-dark">GitHub Profile</a>
-        <a href="https://drive.google.com/file/d/1XQ5jpJqAOCnMVQKss6juHAImwrSkBntH/view?usp=sharing" target="_blank" class="btn3d btn3d-green">📄 Resume</a>
+        <a href="https://drive.google.com/file/d/12EzhRDzqB8j4lTYwIlQaoZEF4K6QPVa4/view?usp=sharing" target="_blank" class="btn3d btn3d-green">📄 Resume</a>
         <a href="#contact" class="btn3d btn3d-outline">Get In Touch</a>
         <a href="#projects" class="btn3d btn3d-red">View Projects</a>
       </div>
@@ -361,31 +361,32 @@ footer{padding:1.8rem 3rem;border-top:1px solid var(--border);display:flex;align
       <div class="exp-card reveal">
         <div class="exp-header">
           <div>
-            <div class="exp-title">Full-Stack Engineer Intern</div>
+            <div class="exp-title">AI Engineer Intern</div>
             <div class="exp-company">Intellexia Tech Pvt. Ltd.</div>
           </div>
-          <div class="exp-date">28 May – Present</div>
+          <div class="exp-date">28 May 2026 – 17 July 2026</div>
         </div>
         <div class="exp-desc">
           <ul>
-            <li>Built and deployed Transpera’s AI video dubbing platform (FastAPI + React/Vite), integrating HeyGen API with Google Cloud Tasks.</li>
-            <li>Refactored backend to production standards with Google Cloud Storage, structured logging, signed URLs, and Dockerized CI/CD.</li>
-            <li>Implementing real-time multilingual voice chat for Transpera’s Chatbot-as-a-Service within a LangGraph state-machine backed by Vertex AI RAG.</li>
+            <li>Deployed Transpera’s AI video dubbing platform, designing a webhook-driven, asynchronous job pipeline via GCP Cloud Tasks to handle long-running HeyGen API translation tasks.</li>
+            <li>Refactored backend storage from local disk to Google Cloud Storage, eliminating stateful dependencies and enabling stateless horizontal scaling on Google Cloud Run.</li>
+            <li>Developed a real-time multilingual voice agent using a LangGraph state-machine architecture and Vertex AI RAG, ensuring robust context retention across conversational turns.</li>
           </ul>
         </div>
       </div>
       <div class="exp-card reveal" style="transition-delay:0.1s">
         <div class="exp-header">
           <div>
-            <div class="exp-title">Machine Learning Intern</div>
+            <div class="exp-title">AI/ML Engineering Intern</div>
             <div class="exp-company">YBI Foundation</div>
           </div>
           <div class="exp-date">May 2025 – July 2025</div>
         </div>
         <div class="exp-desc">
           <ul>
-            <li>Designed and deployed end-to-end ML pipelines improving model workflow efficiency by 30%.</li>
-            <li>Boosted model accuracy to 75–85% through structured preprocessing, optimization, and cross-validation.</li>
+            <li>Engineered end-to-end ML classification and regression pipelines (scikit-learn, Pandas), deploying optimized models that improved baseline predictive accuracy by 97%..</li>
+            <li>Optimized model training workflows utilizing cross-validation and hyperparameter tuning, raising baseline classification F1-score from 70% to 85%.</li>
+            <li>Conducted exploratory data analysis and visualization using Python (Pandas, NumPy, Matplotlib/Seaborn) to uncover trends and inform model selection and feature design.</li>
           </ul>
         </div>
       </div>
@@ -624,9 +625,9 @@ const CMDS={
   experience:{fn:()=>[
     {c:'key',v:' Work Experience'},
     {c:'val',v:'──────────────────────────────'},
-    {c:'ok',v:'[1] Full-Stack Engineer Intern @ Intellexia Tech Pvt. Ltd.'},
-    {c:'val',v:'    FastAPI · React · Google Cloud · HeyGen API'},
-    {c:'ok',v:'[2] Machine Learning Intern @ YBI Foundation'},
+    {c:'ok',v:'[1] AI Engineer Intern @ Intellexia Tech Pvt. Ltd.'},
+    {c:'val',v:'    Webhooks · GCP Cloud Tasks · Cloud Run · Vertex AI'},
+    {c:'ok',v:'[2] AI/ML Engineering Intern @ YBI Foundation'},
     {c:'val',v:'    ML Pipelines · Model Optimization'},
     {c:'ok',v:'[3] Data Analytics Virtual Exp @ Deloitte'},
     {c:'val',v:'    EDA · Forensic Analytics'},
