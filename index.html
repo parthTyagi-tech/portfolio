@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parth Tyagi — ML Engineer</title>
+  <title>Parth Tyagi — AI Engineer | Portfolio</title>
   <link
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
@@ -626,14 +626,14 @@
 
     /* SCROLL REVEAL */
     .reveal {
-      opacity: 0;
-      transform: translateY(36px);
-      transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1)
+      opacity: 1;
+      transform: none;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .reveal.visible {
       opacity: 1;
-      transform: none
+      transform: none;
     }
 
     /* =====================
@@ -852,6 +852,229 @@
 
     .exp-desc li {
       margin-bottom: 0.4rem
+    }
+
+    
+    /* FEATURED PROJECTS (RESUME HIGHLIGHTS) */
+    .featured-projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .featured-project-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 2.2rem;
+      position: relative;
+      transition: all 0.35s ease;
+      box-shadow: 0 4px 20px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .featured-project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px var(--shadow2);
+    }
+
+    .featured-p-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.2rem;
+    }
+
+    .featured-p-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .featured-p-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--pop);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+    }
+
+    .featured-p-badge::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pop);
+    }
+
+    .featured-p-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .featured-p-role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--pop2);
+      letter-spacing: 0.04em;
+    }
+
+    .featured-p-links {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .featured-p-summary {
+      font-size: 0.96rem;
+      color: var(--ink);
+      line-height: 1.75;
+      font-weight: 450;
+      background: var(--surface2);
+      padding: 1.1rem 1.3rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--pop);
+    }
+
+    .featured-p-summary strong {
+      color: var(--pop);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 0.4rem;
+    }
+
+    .featured-p-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .featured-p-points li {
+      font-size: 0.91rem;
+      color: var(--muted);
+      line-height: 1.7;
+      position: relative;
+      padding-left: 1.6rem;
+    }
+
+    .featured-p-points li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--pop);
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+
+    .featured-p-points li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .featured-p-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    .featured-p-tags {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .section-subtitle {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-subtitle::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .compact-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.2rem;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 10px var(--shadow);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .compact-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px var(--shadow2);
+    }
+
+    .compact-card-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .compact-card-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .compact-card-tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-top: auto;
     }
 
     /* PROJECTS */
@@ -1372,29 +1595,24 @@
     <div class="hero-content">
       <div>
         <!-- CHANGE 1: Updated eyebrow -->
-        <div class="hero-eyebrow">Full-Stack AI Engineer &middot; Open to Roles</div>
+        <div class="hero-eyebrow">AI Engineer &middot; Open to Roles</div>
         <h1 class="hero-name">
           <span class="hi">Hey, I'm</span>
           Parth<br><span class="nacc">Tyagi.</span>
         </h1>
-        <div class="hero-role">B.Tech Mathematics &amp; Computing &middot; CUK</div>
+        <div class="hero-role">B.Tech Mathematics &amp; Computing &middot; CUK (2023 &ndash; 2027)</div>
 
         <!-- CHANGE 1: Rewritten summary based on README & projects -->
-        <p class="hero-desc">I build end-to-end AI products that go beyond notebooks — from RAG pipelines and real-time
-          voice AI to full-stack FastAPI/React platforms. 6+ shipped apps &middot; AI Video Dubbing &middot; R²=0.995
-          &middot; RAG + GPT-4o &middot; Multi-agent AI.</p>
+        <p class="hero-desc">BTech Mathematics &amp; Computing undergraduate at Central University of Karnataka (2023 - 2027), focused on AI engineering: RAG pipelines, multi-agent systems, and real-time voice AI. Experienced shipping production LLM applications (Groq, OpenAI, Vertex AI) to Google Cloud.</p>
 
         <!-- CHANGE 1: Updated badges to reflect full stack -->
         <div class="hero-badges">
-          <span class="badge">Python</span><span class="badge">LangChain</span><span class="badge">OpenAI</span><span
-            class="badge">RAG</span><span class="badge">XGBoost</span><span class="badge">Flask</span><span
-            class="badge">PostgreSQL</span><span class="badge">Pinecone</span><span class="badge">NLP</span><span
-            class="badge">Streamlit</span>
+          <span class="badge">Python</span><span class="badge">FastMCP</span><span class="badge">Model Context Protocol</span><span class="badge">LangGraph</span><span class="badge">Clinical RAG</span><span class="badge">WebRTC Voice AI</span><span class="badge">Redis Streams</span><span class="badge">GCP Cloud Tasks</span><span class="badge">Cloud Run</span><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">Pinecone</span><span class="badge">Groq</span>
         </div>
 
         <div class="hero-cta">
           <a href="https://github.com/parthTyagi-tech" target="_blank" class="btn3d btn3d-dark">GitHub Profile</a>
-          <a href="https://drive.google.com/file/d/1ViUx2s9ojh5E3_3YU9D6YWH5Bis0YHwm/view?usp=sharing" target="_blank"
+          <a href="https://drive.google.com/file/d/12D3NtW4ZPV2yYVL21jh_u9z4D0vs8aQ6/view?usp=sharing" target="_blank"
             class="btn3d btn3d-green">📄 Resume</a>
           <a href="#contact" class="btn3d btn3d-outline">Get In Touch</a>
           <a href="#projects" class="btn3d btn3d-red">View Projects</a>
@@ -1443,20 +1661,14 @@
       <!-- Top row: text left, skills right -->
       <div class="about-top">
         <div class="about-text reveal">
-          <p>I'm a B.Tech student in Mathematics &amp; Computing with a focused passion for Applied AI and full-stack AI
-            engineering. My work spans the entire pipeline — from RAG pipelines and multi-agent systems to real-time
-            multilingual voice AI and scalable FastAPI backends.</p>
-          <p>I've built AI video dubbing platforms integrating HeyGen API, multi-agent pricing intelligence engines, and
-            robust cloud architectures on Google Cloud and Render — all shipped live to real users.</p>
+          <p>I'm a B.Tech Mathematics &amp; Computing undergraduate at Central University of Karnataka (2023 &ndash; 2027), focused on AI engineering: RAG pipelines, multi-agent systems, and real-time voice AI. I specialize in shipping production LLM applications (Groq, OpenAI, Vertex AI) to Google Cloud.</p>
+          <p>My recent work includes deploying Transpera's AI video dubbing platform at Intellexia Tech (webhook-driven async job pipeline via GCP Cloud Tasks &amp; Cloud Run), architecting autonomous agentic swarms with FastMCP for Dynamic Pricing, and building sub-50MB clinical RAG engines with 7-language WebRTC voice agents.</p>
           <div class="about-quote">"Build things that work. Document things that last."</div>
-          <p>Currently open to AI/ML Engineering and GenAI internship roles. Full-Stack Engineer Intern at Intellexia
-            Tech Pvt. Ltd., with prior experience at YBI Foundation, Deloitte Virtual Experience, and TATA GenAI
-            programs.</p>
+          <p>Currently open to AI/ML Engineering and GenAI roles. Former AI Engineer Intern at Intellexia Tech Pvt. Ltd. and AI/ML Intern at YBI Foundation.</p>
           <div class="about-btns">
-            <a href="mailto:parthtyagi3389@gmail.com" class="btn3d btn3d-dark"
-              style="font-size:0.68rem;padding:0.6rem 1.3rem">Email Me</a>
-            <a href="https://www.linkedin.com/in/tyagiParth" target="_blank" class="btn3d btn3d-outline"
-              style="font-size:0.68rem;padding:0.6rem 1.3rem">LinkedIn</a>
+            <a href="mailto:parthtyagi3389@gmail.com" class="btn3d btn3d-dark" style="font-size:0.68rem;padding:0.6rem 1.3rem">Email Me</a>
+            <a href="https://www.linkedin.com/in/tyagiParth" target="_blank" class="btn3d btn3d-outline" style="font-size:0.68rem;padding:0.6rem 1.3rem">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/12D3NtW4ZPV2yYVL21jh_u9z4D0vs8aQ6/view?usp=sharing" target="_blank" class="btn3d btn3d-green" style="font-size:0.68rem;padding:0.6rem 1.3rem">📄 View Resume</a>
           </div>
         </div>
 
@@ -1464,23 +1676,22 @@
           <div class="skills-label">Core Skills</div>
           <div class="skills-cloud">
             <span class="s-chip">Python &middot; Advanced</span>
-            <span class="s-chip">LangChain &middot; RAG</span>
-            <span class="s-chip">OpenAI API</span>
-            <span class="s-chip">Pinecone</span>
-            <span class="s-chip">Flask &middot; REST API</span>
-            <span class="s-chip">PostgreSQL</span>
-            <span class="s-chip">Google OAuth</span>
-            <span class="s-chip">XGBoost</span>
-            <span class="s-chip">Scikit-Learn</span>
-            <span class="s-chip">NLP &middot; TF-IDF</span>
-            <span class="s-chip">Pandas &middot; NumPy</span>
-            <span class="s-chip">Streamlit</span>
-            <span class="s-chip">React &middot; JS</span>
-            <span class="s-chip">Render &middot; Vercel</span>
-            <span class="s-chip">Git &middot; GitHub</span>
-            <span class="s-chip">Feature Engineering</span>
-            <span class="s-chip">EDA</span>
-            <span class="s-chip">GridSearchCV</span>
+            <span class="s-chip">Model Context Protocol (MCP)</span>
+            <span class="s-chip">FastMCP</span>
+            <span class="s-chip">LangGraph</span>
+            <span class="s-chip">LangChain &middot; LangSmith</span>
+            <span class="s-chip">Clinical RAG &middot; Pinecone</span>
+            <span class="s-chip">WebRTC Voice AI (LiveKit)</span>
+            <span class="s-chip">Deepgram &middot; Groq</span>
+            <span class="s-chip">Redis Streams</span>
+            <span class="s-chip">GCP (Cloud Tasks, Cloud Run, GCS)</span>
+            <span class="s-chip">FastAPI &middot; Flask &middot; REST APIs</span>
+            <span class="s-chip">PostgreSQL &middot; SQLAlchemy</span>
+            <span class="s-chip">Server-Sent Events (SSE)</span>
+            <span class="s-chip">Docker</span>
+            <span class="s-chip">XGBoost &middot; Scikit-Learn</span>
+            <span class="s-chip">Cross-Validation &middot; EDA</span>
+            <span class="s-chip">SQL &middot; C++ &middot; JavaScript</span>
           </div>
         </div>
       </div>
@@ -1529,48 +1740,40 @@
           </div>
           <div class="exp-desc">
             <ul>
-              <li>Deployed Transpera’s AI video dubbing platform, designing a webhook-driven, asynchronous job pipeline
-                via GCP Cloud Tasks to handle long-running HeyGen API translation tasks.</li>
-              <li>Refactored backend storage from local disk to Google Cloud Storage, eliminating stateful dependencies
-                and enabling stateless horizontal scaling on Google Cloud Run.</li>
-              <li>Developed a real-time multilingual voice agent using a LangGraph state-machine architecture and Vertex
-                AI RAG, ensuring robust context retention across conversational turns.</li>
+              <li>Deployed Transpera’s AI video dubbing platform, designing a webhook-driven, asynchronous job pipeline via GCP Cloud Tasks for HeyGen API tasks, cutting timeout failures by 85% across the concurrent jobs.</li>
+              <li>Refactored backend storage from local disk to Google Cloud Storage, eliminating stateful bottlenecks and enabling stateless horizontal scaling on Cloud Run across 10+ container instances.</li>
+              <li>Developed a real-time multilingual voice agent using a LangGraph state-machine architecture and Vertex AI RAG, achieving &lt;850ms latency and context retention across the conversational turns.</li>
             </ul>
           </div>
         </div>
         <div class="exp-card reveal" style="transition-delay:0.1s">
           <div class="exp-header">
             <div>
-              <div class="exp-title">AI/ML Engineering Intern</div>
+              <div class="exp-title">AI/ML Intern</div>
               <div class="exp-company">YBI Foundation</div>
             </div>
             <div class="exp-date">May 2025 – July 2025</div>
           </div>
           <div class="exp-desc">
             <ul>
-              <li>Engineered end-to-end ML classification and regression pipelines (scikit-learn, Pandas), deploying
-                optimized models that improved baseline predictive accuracy by 97%..</li>
-              <li>Optimized model training workflows utilizing cross-validation and hyperparameter tuning, raising
-                baseline classification F1-score from 70% to 85%.</li>
-              <li>Conducted exploratory data analysis and visualization using Python (Pandas, NumPy, Matplotlib/Seaborn)
-                to uncover trends and inform model selection and feature design.</li>
+              <li>Engineered end-to-end ML classification and regression pipelines (scikit-learn, Pandas), deploying tuned models that achieved 97% predictive accuracy across structured evaluation benchmarks.</li>
+              <li>Optimized model training workflows utilizing stratified cross-validation and hyperparameter tuning, elevating baseline macro F1-score from 70% to 85%.</li>
+              <li>Conducted exploratory data analysis and visualization using Python (Pandas, NumPy, Matplotlib/Seaborn) to uncover trends and inform model selection and feature design.</li>
             </ul>
           </div>
         </div>
         <div class="exp-card reveal" style="transition-delay:0.2s">
           <div class="exp-header">
             <div>
-              <div class="exp-title">Data Analytics Virtual Experience</div>
+              <div class="exp-title">Data Analytics &amp; GenAI Virtual Experience</div>
               <div class="exp-company">Deloitte / TATA GenAI</div>
             </div>
             <div class="exp-date">June 2025</div>
           </div>
           <div class="exp-desc">
             <ul>
-              <li>Conducted EDA on simulated enterprise datasets (10K+ records) to support forensic analytics
-                investigations.</li>
-              <li>Applied Gen-AI-driven analytics to evaluate financial risk indicators, improving risk identification
-                accuracy by 20%.</li>
+              <li>Conducted EDA on simulated enterprise datasets (10K+ records) to support forensic analytics investigations.</li>
+              <li>Applied Gen-AI-driven analytics to evaluate financial risk indicators, improving risk identification accuracy by 20%.</li>
             </ul>
           </div>
         </div>
@@ -1579,134 +1782,250 @@
   </section>
 
   <!-- PROJECTS — CHANGE 3: Added MediBot and Dynamic Pricing -->
+    <!-- PROJECTS -->
   <section id="projects">
     <div class="section-inner">
       <div class="section-tag">03 projects</div>
       <h2 class="section-title reveal">Featured Work</h2>
       <div class="section-divider"></div>
-      <div class="projects-grid">
 
-        <!-- NEW: MediBot -->
-        <div class="project-card reveal" style="transition-delay:0.02s"
-          onclick="window.open('https://github.com/parthTyagi-tech/medibot','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">MediBot — AI Medical Chatbot</div>
-            <div class="p-sub">RAG + GPT-4o + Pinecone &middot; 9,076 medical chunks &middot; Semantic top-3 retrieval
-              &middot; Flask + Gunicorn &middot; Live on Render</div>
-            <div class="p-tags"><span class="ctag">RAG</span><span class="ctag">GPT-4o</span><span
-                class="ctag">Pinecone</span><span class="ctag">LangChain</span><span class="ctag">Flask</span></div>
+      <!-- FLAGSHIP PROJECTS ACCORDING TO RESUME -->
+      <div class="featured-projects-list">
+
+        <!-- PROJECT 1: Dynamic Pricing Intelligence Platform -->
+        <div class="featured-project-card reveal" style="transition-delay:0.02s">
+          <div class="featured-p-header">
+            <div class="featured-p-title-group">
+              <span class="featured-p-badge">Featured System // 01</span>
+              <h3 class="featured-p-title">Dynamic Pricing Intelligence Platform</h3>
+              <div class="featured-p-role">AI/ML Full-Stack Project &middot; Autonomous Agentic Swarm &amp; FastMCP Server</div>
+            </div>
+            <div class="featured-p-links">
+              <a href="https://github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform" target="_blank" class="btn3d btn3d-dark" style="font-size:0.68rem;padding:0.5rem 1.1rem">GitHub Repo ↗</a>
+            </div>
           </div>
-          <div class="p-foot">Live Demo ↗</div>
+
+          <div class="featured-p-summary">
+            <strong>Summary:</strong> Autonomous goal-driven multi-agent pricing intelligence engine executing continuous Plan-Act-Observe-Adapt loops to extract, verify, and reprice products across 14 marketplaces with Model Context Protocol (FastMCP) integration and event-driven GCP Cloud Tasks orchestration.
+          </div>
+
+          <ul class="featured-p-points">
+            <li>
+              <strong>Autonomous Agentic AI Swarm:</strong> Architected goal-driven agents (Supervisor, Scrapers, Reasoning, Approver) executing continuous Plan-Act-Observe-Adapt loops to extract, verify, and reprice products across 14 marketplaces.
+            </li>
+            <li>
+              <strong>Model Context Protocol (MCP) Interface:</strong> Architected and deployed an SSE-based FastMCP server on Render, exposing 7 agentic tools and 4 catalog resources to external AI hosts (Cursor, Claude Desktop) with Bearer auth and atomic CAS rollback safety.
+            </li>
+            <li>
+              <strong>Event-Driven Infrastructure &amp; Safety:</strong> Scaled multi-agent orchestration via async task queues (GCP Cloud Tasks) with real-time SSE streaming, enforcing deterministic margin floors and immutable audit logs to prevent out-of-bounds pricing drift.
+            </li>
+          </ul>
+
+          <div class="featured-p-footer">
+            <div class="featured-p-tags">
+              <span class="ctag">Autonomous Swarm</span>
+              <span class="ctag">FastMCP</span>
+              <span class="ctag">Model Context Protocol (MCP)</span>
+              <span class="ctag">GCP Cloud Tasks</span>
+              <span class="ctag">SSE Streaming</span>
+              <span class="ctag">Flask</span>
+              <span class="ctag">React</span>
+              <span class="ctag">PostgreSQL</span>
+              <span class="ctag">Render</span>
+            </div>
+          </div>
         </div>
 
-        <!-- NEW: Dynamic Pricing -->
-        <div class="project-card reveal" style="transition-delay:0.05s"
-          onclick="window.open('https://github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">Dynamic Pricing Intelligence</div>
-            <div class="p-sub">Multi-agent AI &middot; 10+ backend APIs &middot; LLM pricing recommendations &middot;
-              Real-time analytics &middot; Flask + React &middot; Deployed Render + Vercel</div>
-            <div class="p-tags"><span class="ctag">Multi-Agent</span><span class="ctag">LLM</span><span
-                class="ctag">React</span><span class="ctag">Flask</span><span class="ctag">PostgreSQL</span></div>
+        <!-- PROJECT 2: MediAssist -->
+        <div class="featured-project-card reveal" style="transition-delay:0.06s">
+          <div class="featured-p-header">
+            <div class="featured-p-title-group">
+              <span class="featured-p-badge">Featured System // 02</span>
+              <h3 class="featured-p-title">MediAssist</h3>
+              <div class="featured-p-role">Clinical AI Engine &middot; Real-Time Voice AI (LiveKit) &amp; LangSmith Evals</div>
+            </div>
+            <div class="featured-p-links">
+              <a href="https://github.com/parthTyagi-tech/medibot" target="_blank" class="btn3d btn3d-dark" style="font-size:0.68rem;padding:0.5rem 1.1rem">GitHub Repo ↗</a>
+            </div>
           </div>
-          <div class="p-foot">View Repo ↗</div>
+
+          <div class="featured-p-summary">
+            <strong>Summary:</strong> High-performance clinical AI assistant combining a &lt;50MB RAM clinical RAG engine on Flask, Groq, and Pinecone with a 7-language WebRTC real-time voice agent (LiveKit + Deepgram), decoupled Redis Streams pipeline, and 11-metric LLM-as-judge observability.
+          </div>
+
+          <ul class="featured-p-points">
+            <li>
+              <strong>Clinical Engine &amp; Voice AI:</strong> Built a &lt;50MB RAM clinical RAG agent on Flask, Groq, and Pinecone with a sub-ms intent router and 7-language WebRTC voice agent (LiveKit + Deepgram).
+            </li>
+            <li>
+              <strong>Async Reliability (Redis Streams):</strong> Decoupled memory, summarization, and evals via Redis Streams with SHA-256 deduplication and DLQ routing, ensuring &lt;3000ms response latency.
+            </li>
+            <li>
+              <strong>Evaluation &amp; Observability:</strong> Deployed an 11-metric LLM-as-judge pipeline pairing an offline 30-case clinical benchmark with 20% online shadow evals in LangSmith and Brevo alerts.
+            </li>
+          </ul>
+
+          <div class="featured-p-footer">
+            <div class="featured-p-tags">
+              <span class="ctag">Clinical RAG</span>
+              <span class="ctag">Groq</span>
+              <span class="ctag">Pinecone</span>
+              <span class="ctag">WebRTC (LiveKit)</span>
+              <span class="ctag">Deepgram Voice</span>
+              <span class="ctag">Redis Streams</span>
+              <span class="ctag">LangSmith</span>
+              <span class="ctag">Flask</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Existing: AI Fitness Intelligence -->
-        <div class="project-card reveal" style="transition-delay:0.08s"
-          onclick="window.open('https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">AI Fitness Intelligence</div>
-            <div class="p-sub">Body fat prediction &middot; Workout planner &middot; XGBoost vs Linear Regression
-              &middot; R²=0.995 &middot; MAE=0.21%</div>
-            <div class="p-tags"><span class="ctag">XGBoost</span><span class="ctag">Streamlit</span><span
-                class="ctag">Sklearn</span></div>
+        <!-- PROJECT 3: AI-Driven Fitness Intelligence System -->
+        <div class="featured-project-card reveal" style="transition-delay:0.1s">
+          <div class="featured-p-header">
+            <div class="featured-p-title-group">
+              <span class="featured-p-badge">Featured System // 03</span>
+              <h3 class="featured-p-title">AI-Driven Fitness Intelligence System</h3>
+              <div class="featured-p-role">ML Inference Pipeline &middot; XGBoost R²=0.997 &middot; FastAPI Production Serving</div>
+            </div>
+            <div class="featured-p-links">
+              <a href="https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System" target="_blank" class="btn3d btn3d-dark" style="font-size:0.68rem;padding:0.5rem 1.1rem">GitHub Repo ↗</a>
+            </div>
           </div>
-          <div class="p-foot">Gym Intelligence</div>
-        </div>
 
-        <!-- Existing: AI Fitness API -->
-        <div class="project-card reveal" style="transition-delay:0.11s"
-          onclick="window.open('https://github.com/parthTyagi-tech/AI-Fitness-API.git','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">AI Fitness API</div>
-            <div class="p-sub">Full-stack Flask app &middot; Google OAuth &middot; PostgreSQL &middot; 12+ biometric
-              inputs &middot; Referral system &middot; Live on Render</div>
-            <div class="p-tags"><span class="ctag">Flask</span><span class="ctag">REST API</span><span
-                class="ctag">PostgreSQL</span><span class="ctag">OAuth</span></div>
+          <div class="featured-p-summary">
+            <strong>Summary:</strong> End-to-end clinical-grade fitness and biometric prediction pipeline analyzing 5,000+ biometric records, benchmarking linear vs gradient-boosted models to achieve 0.997 R² and 0.071% MAE, deployed via FastAPI with PostgreSQL, OAuth 2.0, and &lt;50ms inference.
           </div>
-          <div class="p-foot">Live Demo ↗</div>
-        </div>
 
-        <!-- Existing: AI Job Skill Analyzer -->
-        <div class="project-card reveal" style="transition-delay:0.14s"
-          onclick="window.open('https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">AI Job Skill Analyzer</div>
-            <div class="p-sub">NLP skill extraction &middot; 90% match accuracy &middot; TF-IDF + cosine similarity
-              &middot; Gap analysis &middot; Deployed Streamlit</div>
-            <div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Streamlit</span><span
-                class="ctag">TF-IDF</span></div>
-          </div>
-          <div class="p-foot">Skill Gap AI</div>
-        </div>
+          <ul class="featured-p-points">
+            <li>
+              <strong>EDA &amp; Feature Engineering:</strong> Analyzed 5K biometric records and built leak-free IQR, 3σ preprocessing and clinical ratio features, reducing MAE by 66% (0.21% &rarr; 0.071%).
+            </li>
+            <li>
+              <strong>Fold Model Benchmarking:</strong> Compared Linear Regression and Gradient Boosting using 5-fold CV; tuned XGBRegressor with RandomizedSearchCV, achieving 0.997 R² and 0.071% MAE.
+            </li>
+            <li>
+              <strong>Production Serving &amp; Deployment:</strong> Deployed the Joblib pipeline via FastAPI on Render with PostgreSQL, OAuth 2.0 authentication, and real-time inference in &lt;50ms.
+            </li>
+          </ul>
 
-        <!-- Existing: Movie Recommender -->
-        <div class="project-card reveal" style="transition-delay:0.17s"
-          onclick="window.open('https://github.com/parthTyagi-tech/Movie-Recommend-System','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">Movie Recommender</div>
-            <div class="p-sub">Content-based filtering via TF-IDF + cosine similarity on TMDB metadata. Live top-N
-              recommendations.</div>
-            <div class="p-tags"><span class="ctag">TF-IDF</span><span class="ctag">Cosine Sim</span><span
-                class="ctag">Streamlit</span></div>
+          <div class="featured-p-footer">
+            <div class="featured-p-tags">
+              <span class="ctag">FastAPI</span>
+              <span class="ctag">XGBoost</span>
+              <span class="ctag">Scikit-Learn</span>
+              <span class="ctag">RandomizedSearchCV</span>
+              <span class="ctag">PostgreSQL</span>
+              <span class="ctag">OAuth 2.0</span>
+              <span class="ctag">Render</span>
+              <span class="ctag">Joblib</span>
+            </div>
           </div>
-          <div class="p-foot">Movie Rec System</div>
-        </div>
-
-        <!-- Existing: Women Cloth Sentiment -->
-        <div class="project-card reveal" style="transition-delay:0.2s"
-          onclick="window.open('https://github.com/parthTyagi-tech/women-cloth-reviews-prediction','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">Women's Cloth Sentiment</div>
-            <div class="p-sub">NLP-based positive/negative review classification on women's fashion data. Retail-ready
-              prediction pipeline.</div>
-            <div class="p-tags"><span class="ctag">NLP</span><span class="ctag">Sentiment</span><span
-                class="ctag">Classification</span></div>
-          </div>
-          <div class="p-foot">Sentiment NLP</div>
-        </div>
-
-        <!-- Existing: Heart Disease Prediction -->
-        <div class="project-card reveal" style="transition-delay:0.23s"
-          onclick="window.open('https://github.com/parthTyagi-tech/Heart-Disease-Prediction','_blank')">
-          <div class="p-glow"></div>
-          <div class="p-border"></div>
-          <div class="p-content"><span class="p-icon"></span>
-            <div class="p-title">Heart Disease Prediction</div>
-            <div class="p-sub">Clinical ML classifier predicting cardiac risk. Logistic Regression &middot; Random
-              Forest &middot; Feature importance analysis.</div>
-            <div class="p-tags"><span class="ctag">Classification</span><span class="ctag">Sklearn</span><span
-                class="ctag">EDA</span></div>
-          </div>
-          <div class="p-foot">Cardiac Risk AI</div>
         </div>
 
       </div>
+
+      <!-- MORE NOTEWORTHY WORK -->
+      <div class="section-subtitle reveal">More Noteworthy Work</div>
+      <div class="compact-grid">
+
+        <!-- AI Fitness API -->
+        <a href="https://github.com/parthTyagi-tech/AI-Fitness-API.git" target="_blank" class="compact-card reveal" style="transition-delay:0.04s">
+          <div>
+            <div class="compact-card-title">
+              <span>AI Fitness API</span>
+              <span style="font-size:0.8rem;color:var(--pop)">↗</span>
+            </div>
+            <div class="compact-card-desc">
+              Full-stack Flask application with Google OAuth, PostgreSQL database, 12+ biometric tracking inputs, and an automated referral incentive engine. Deployed live on Render.
+            </div>
+          </div>
+          <div class="compact-card-tags">
+            <span class="ctag">Flask</span>
+            <span class="ctag">REST API</span>
+            <span class="ctag">PostgreSQL</span>
+            <span class="ctag">OAuth 2.0</span>
+            <span class="ctag">Render</span>
+          </div>
+        </a>
+
+        <!-- AI Job Skill Analyzer -->
+        <a href="https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer" target="_blank" class="compact-card reveal" style="transition-delay:0.08s">
+          <div>
+            <div class="compact-card-title">
+              <span>AI Job Skill Gap Analyzer</span>
+              <span style="font-size:0.8rem;color:var(--pop)">↗</span>
+            </div>
+            <div class="compact-card-desc">
+              NLP skill extraction engine providing 90% match accuracy utilizing TF-IDF, cosine similarity distance metrics, and automated resume gap recommendations. Deployed on Streamlit.
+            </div>
+          </div>
+          <div class="compact-card-tags">
+            <span class="ctag">NLP</span>
+            <span class="ctag">TF-IDF</span>
+            <span class="ctag">Cosine Similarity</span>
+            <span class="ctag">Streamlit</span>
+          </div>
+        </a>
+
+        <!-- Movie Recommender -->
+        <a href="https://github.com/parthTyagi-tech/Movie-Recommend-System" target="_blank" class="compact-card reveal" style="transition-delay:0.12s">
+          <div>
+            <div class="compact-card-title">
+              <span>Movie Recommendation System</span>
+              <span style="font-size:0.8rem;color:var(--pop)">↗</span>
+            </div>
+            <div class="compact-card-desc">
+              Content-based recommendation engine built over TMDB metadata, applying tokenization, TF-IDF vectorization, and cosine distance to yield instant Top-N matching titles.
+            </div>
+          </div>
+          <div class="compact-card-tags">
+            <span class="ctag">Recommendation</span>
+            <span class="ctag">TF-IDF</span>
+            <span class="ctag">TMDB API</span>
+            <span class="ctag">Streamlit</span>
+          </div>
+        </a>
+
+        <!-- Women's Clothing Sentiment -->
+        <a href="https://github.com/parthTyagi-tech/women-cloth-reviews-prediction" target="_blank" class="compact-card reveal" style="transition-delay:0.16s">
+          <div>
+            <div class="compact-card-title">
+              <span>Women's Clothing Sentiment</span>
+              <span style="font-size:0.8rem;color:var(--pop)">↗</span>
+            </div>
+            <div class="compact-card-desc">
+              E-commerce customer sentiment classification pipeline performing automated review text preprocessing, feature tokenization, and polarity classification for retail analytics.
+            </div>
+          </div>
+          <div class="compact-card-tags">
+            <span class="ctag">NLP</span>
+            <span class="ctag">Sentiment Analysis</span>
+            <span class="ctag">Classification</span>
+            <span class="ctag">EDA</span>
+          </div>
+        </a>
+
+        <!-- Heart Disease Prediction -->
+        <a href="https://github.com/parthTyagi-tech/Heart-Disease-Prediction" target="_blank" class="compact-card reveal" style="transition-delay:0.2s">
+          <div>
+            <div class="compact-card-title">
+              <span>Heart Disease Prediction</span>
+              <span style="font-size:0.8rem;color:var(--pop)">↗</span>
+            </div>
+            <div class="compact-card-desc">
+              Clinical diagnostic risk classifier evaluating cardiovascular indicators with Logistic Regression and Random Forest ensembles, paired with feature importance sensitivity analysis.
+            </div>
+          </div>
+          <div class="compact-card-tags">
+            <span class="ctag">Clinical ML</span>
+            <span class="ctag">Random Forest</span>
+            <span class="ctag">Logistic Regression</span>
+            <span class="ctag">Scikit-Learn</span>
+          </div>
+        </a>
+
+      </div>
+
     </div>
   </section>
 
@@ -1833,9 +2152,19 @@
     const prog = document.getElementById('progress');
     window.addEventListener('scroll', () => { prog.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%' });
 
-    /* SCROLL REVEAL */
-    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }), { threshold: 0.08 });
+    /* SCROLL REVEAL & FALLBACK */
+    document.querySelectorAll('.reveal').forEach(r => r.classList.add('visible'));
+    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }), { threshold: 0.02, rootMargin: '0px 0px -20px 0px' });
     document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+    function checkReveal() {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(r => {
+        r.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', checkReveal, { passive: true });
+    window.addEventListener('load', checkReveal);
+    setTimeout(checkReveal, 100);
+    setTimeout(checkReveal, 500);
 
     /* PARTICLES */
     const pcols = ['#e63946', '#457b9d', '#1a1a2e', '#bd9f67', '#6b7280'];
@@ -1883,111 +2212,82 @@
       },
       experience: {
         fn: () => [
-          { c: 'key', v: ' Work Experience' },
+          { c: 'key', v: '💼 Work Experience' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: '[1] AI Engineer Intern @ Intellexia Tech Pvt. Ltd.' },
-          { c: 'val', v: '    Webhooks · GCP Cloud Tasks · Cloud Run · Vertex AI' },
-          { c: 'ok', v: '[2] AI/ML Engineering Intern @ YBI Foundation' },
-          { c: 'val', v: '    ML Pipelines · Model Optimization' },
-          { c: 'ok', v: '[3] Data Analytics Virtual Exp @ Deloitte' },
-          { c: 'val', v: '    EDA · Forensic Analytics' },
-          { c: 'ok', v: '[4] GenAI Analytics Virtual Exp @ TATA' },
-          { c: 'val', v: '    Gen-AI Analytics · Financial Risk' },
+          { c: 'ok', v: '[1] AI Engineer Intern @ Intellexia Tech Pvt. Ltd. (May – July 2026)' },
+          { c: 'val', v: '    Transpera AI dubbing · GCP Cloud Tasks (85% fewer timeouts) · Cloud Run · Voice AI (<850ms)' },
+          { c: 'ok', v: '[2] AI/ML Intern @ YBI Foundation (May – July 2025)' },
+          { c: 'val', v: '    ML Pipelines (97% accuracy) · Stratified CV (F1 70%→85%) · EDA' },
+          { c: 'ok', v: '[3] Data Analytics Virtual Experience @ Deloitte (June 2025)' },
+          { c: 'val', v: '    EDA on 10K+ records · Forensic analytics' },
+          { c: 'ok', v: '[4] GenAI Analytics Virtual Experience @ TATA (June 2025)' },
+          { c: 'val', v: '    Financial risk assessment (+20% identification accuracy)' },
         ]
       },
       projects: {
         fn: () => [
           { c: 'key', v: '🚀 Featured Projects' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: '[1] MediBot — AI Medical Chatbot' },
-          { c: 'val', v: '    RAG + GPT-4o + Pinecone · 9,076 medical chunks · Flask · Live on Render' },
-          { c: 'lnk', v: '    → github.com/parthTyagi-tech/medibot', h: 'https://github.com/parthTyagi-tech/medibot' },
-          { c: 'ok', v: '[2] Dynamic Pricing Intelligence Platform' },
-          { c: 'val', v: '    Multi-agent AI · 10+ APIs · LLM pricing · Flask + React · Render + Vercel' },
+          { c: 'ok', v: '[1] Dynamic Pricing Intelligence Platform' },
+          { c: 'val', v: '    Autonomous AI Swarm · FastMCP Server · GCP Cloud Tasks · 14 Marketplaces' },
           { c: 'lnk', v: '    → github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform', h: 'https://github.com/parthTyagi-tech/dynamic-pricing-intelligence-platform' },
-          { c: 'ok', v: '[3] AI Fitness API — Full-Stack Flask App' },
-          { c: 'val', v: '    Flask · PostgreSQL · Google OAuth · Referral system · Live on Render' },
-          { c: 'lnk', v: '    → ai-fitness-api-68n1.onrender.com', h: 'https://github.com/parthTyagi-tech/AI-Fitness-API.git' },
-          { c: 'ok', v: '[4] AI Fitness Intelligence System' },
-          { c: 'val', v: '    XGBoost · Streamlit · R²=0.995, MAE=0.21%' },
+          { c: 'ok', v: '[2] MediAssist — Clinical Engine & Voice AI' },
+          { c: 'val', v: '    <50MB RAM RAG · 7-Lang WebRTC Voice (LiveKit) · Redis Streams · LangSmith' },
+          { c: 'lnk', v: '    → github.com/parthTyagi-tech/medibot', h: 'https://github.com/parthTyagi-tech/medibot' },
+          { c: 'ok', v: '[3] AI-Driven Fitness Intelligence System' },
+          { c: 'val', v: '    XGBoost R²=0.997, MAE=0.071% · FastAPI · PostgreSQL · <50ms Inference' },
           { c: 'lnk', v: '    → github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System', h: 'https://github.com/parthTyagi-tech/AI-Driven-Fitness-Intelligence-System' },
+          { c: 'ok', v: '[4] AI Fitness API — Full-Stack Flask App' },
+          { c: 'val', v: '    Flask · PostgreSQL · Google OAuth · Referral system · Live on Render' },
+          { c: 'lnk', v: '    → github.com/parthTyagi-tech/AI-Fitness-API.git', h: 'https://github.com/parthTyagi-tech/AI-Fitness-API.git' },
           { c: 'ok', v: '[5] AI Job & Skill Gap Analyzer' },
           { c: 'val', v: '    NLP · TF-IDF · 90% match accuracy · Deployed Streamlit' },
           { c: 'lnk', v: '    → github.com/parthTyagi-tech/AIJobSkillGapAnalyzer', h: 'https://github.com/parthTyagi-tech/AIJobSkillGapAnalyzer' },
           { c: 'ok', v: '[6] Movie Recommendation System' },
-          { c: 'val', v: '    TF-IDF · Cosine Similarity · TMDB data' },
+          { c: 'val', v: '    TF-IDF · Cosine Similarity · TMDB metadata' },
           { c: 'lnk', v: '    → github.com/parthTyagi-tech/Movie-Recommend-System', h: 'https://github.com/parthTyagi-tech/Movie-Recommend-System' },
-          { c: 'ok', v: '[7] Women\'s Clothing Sentiment · [8] Heart Disease Prediction' },
+          { c: 'ok', v: "[7] Women's Clothing Sentiment · [8] Heart Disease Risk" },
           { c: 'lnk', v: '    → github.com/parthTyagi-tech', h: 'https://github.com/parthTyagi-tech' },
         ]
       },
       skills: {
         fn: () => [
-          { c: 'key', v: '🛠 Tech Stack' },
+          { c: 'key', v: '🛠 Tech Stack & Skills' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: 'AI/LLM    : OpenAI API · LangChain · RAG · Pinecone · GPT-4o' },
-          { c: 'ok', v: 'ML Libs   : Scikit-Learn · XGBoost · TensorFlow · PyTorch' },
-          { c: 'ok', v: 'Languages : Python  · JavaScript · TypeScript · SQL' },
-          { c: 'ok', v: 'Backend   : Flask · PostgreSQL · SQLAlchemy · JWT · Google OAuth' },
-          { c: 'ok', v: 'Frontend  : React · Streamlit · Three.js' },
-          { c: 'ok', v: 'NLP       : TF-IDF · Cosine Similarity · Tokenization' },
-          { c: 'ok', v: 'Deploy    : Render · Vercel · Gunicorn' },
-          { c: 'ok', v: 'Tools     : Git · GitHub · Postman · Matplotlib · Seaborn' },
+          { c: 'ok', v: 'Programming : Python · SQL · C++ · MATLAB · JavaScript' },
+          { c: 'ok', v: 'Protocols   : Model Context Protocol (MCP) · FastMCP · REST APIs · SSE' },
+          { c: 'ok', v: 'AI / Voice  : WebRTC (LiveKit) · LangChain · LangGraph · LangSmith · Deepgram' },
+          { c: 'ok', v: 'ML & Data   : Scikit-Learn · XGBoost · Pandas · NumPy · Cross-Validation' },
+          { c: 'ok', v: 'Backend     : FastAPI · Flask · PostgreSQL · SQLAlchemy · Redis Streams · Docker' },
+          { c: 'ok', v: 'Cloud/DevOps: GCP (Cloud Run, Cloud Tasks, GCS, Cloud Build) · Render · Vercel · CI/CD' },
         ]
       },
       resume: {
         fn: () => [
           { c: 'key', v: '📄 Parth Tyagi — Resume' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: '🎓 B.Tech Mathematics & Computing — Central University of Karnataka' },
-          { c: 'ok', v: '🏢 Intellexia Tech Pvt. Ltd. Intern' },
-          { c: 'ok', v: '🏢 YBI Foundation Intern' },
-          { c: 'ok', v: '🏢 Deloitte Virtual Experience Program' },
-          { c: 'ok', v: '🏢 TATA GenAI Virtual Experience' },
+          { c: 'ok', v: '🎓 B.Tech Mathematics & Computing — Central University of Karnataka (2023 - 2027)' },
+          { c: 'ok', v: '🏢 Intellexia Tech Pvt. Ltd. — AI Engineer Intern' },
+          { c: 'ok', v: '🏢 YBI Foundation — AI/ML Intern' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: '✅ MediBot: RAG + GPT-4o + Pinecone, 9,076 medical chunks' },
-          { c: 'ok', v: '✅ Dynamic Pricing: Multi-agent AI, 10+ APIs, Flask + React' },
-          { c: 'ok', v: '✅ AI Fitness API: XGBoost R²=0.995, Google OAuth, PostgreSQL' },
-          { c: 'ok', v: '✅ NLP: TF-IDF, cosine similarity, 90% match accuracy' },
-          { c: 'ok', v: '✅ Algos from scratch: Linear, Perceptron, Logistic' },
+          { c: 'ok', v: '🚀 Dynamic Pricing Intelligence: Autonomous Swarm, FastMCP, Cloud Tasks' },
+          { c: 'ok', v: '🚀 MediAssist: Clinical RAG, 7-lang WebRTC Voice, Redis Streams' },
+          { c: 'ok', v: '🚀 AI Fitness Intelligence: XGBoost R²=0.997, FastAPI, <50ms' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'key', v: '📌 Status: Open to AI/ML Engineer & GenAI Intern roles' },
-          { c: 'lnk', v: '   📧 parthtyagi3389@gmail.com', h: 'mailto:parthtyagi3389@gmail.com' },
-        ]
-      },
-      contact: {
-        fn: () => [
-          { c: 'key', v: '📬 Contact Info' },
-          { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: 'Email    : parthtyagi3389@gmail.com' },
-          { c: 'lnk', v: 'GitHub   : github.com/parthTyagi-tech', h: 'https://github.com/parthTyagi-tech' },
-          { c: 'lnk', v: 'LinkedIn : linkedin.com/in/tyagiParth', h: 'https://www.linkedin.com/in/tyagiParth' },
-          { c: 'lnk', v: 'Quora    : quora.com/profile/Parth-Tyagi-139', h: 'https://www.quora.com/profile/Parth-Tyagi-139' },
-          { c: 'ok', v: 'Location : Central University of Karnataka, India' },
-        ]
-      },
-      algos: {
-        fn: () => [
-          { c: 'key', v: '🧮 Algorithms From Scratch' },
-          { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: '[01] Simple Linear Regression → ŷ = w₀ + w₁x' },
-          { c: 'ok', v: '[02] Multi-Linear Regression  → θ = (XᵀX)⁻¹Xᵀy' },
-          { c: 'ok', v: '[03] Perceptron               → ŷ = step(Σwᵢxᵢ+b)' },
-          { c: 'ok', v: '[04] Gradient Descent         → w := w - α·∂J/∂w' },
-          { c: 'ok', v: '[05] Logistic Regression      → σ(z) = 1/(1+e⁻ᶻ)' },
-          { c: 'val', v: 'All built with NumPy only. No sklearn.' },
+          { c: 'lnk', v: '📥 View & Download Resume (Google Drive)', h: 'https://drive.google.com/file/d/12D3NtW4ZPV2yYVL21jh_u9z4D0vs8aQ6/view?usp=sharing' },
+          { c: 'lnk', v: '📧 Contact: parthtyagi3389@gmail.com', h: 'mailto:parthtyagi3389@gmail.com' },
         ]
       },
       about: {
         fn: () => [
           { c: 'key', v: '👋 About Parth Tyagi' },
           { c: 'val', v: '──────────────────────────────' },
-          { c: 'ok', v: 'Full-Stack AI Engineer — RAG, LLMs, ML, deployed APIs.' },
+          { c: 'ok', v: 'B.Tech Math & Computing @ CUK (2023 - 2027).' },
+          { c: 'ok', v: 'Focused on AI Engineering: RAG pipelines, multi-agent systems, & real-time voice AI.' },
           { c: 'val', v: '"Build things that work. Document things that last."' },
-          { c: 'ok', v: '→ Data → Model → API → Deploy is my workflow.' },
-          { c: 'ok', v: '→ RAG, Multi-agent AI, NLP, Recommendation Systems — all shipped live.' },
-          { c: 'ok', v: '→ Open to AI/ML Engineering roles and GenAI internships.' },
+          { c: 'ok', v: '→ Shipping production LLM apps (Groq, OpenAI, Vertex AI) to Google Cloud.' },
           { c: 'ok', v: '→ Experience: Intellexia Tech, YBI Foundation, Deloitte, TATA GenAI.' },
+          { c: 'lnk', v: '📄 Resume: View on Google Drive', h: 'https://drive.google.com/file/d/12D3NtW4ZPV2yYVL21jh_u9z4D0vs8aQ6/view?usp=sharing' },
         ]
       },
       github: { fn: () => { window.open('https://github.com/parthTyagi-tech', '_blank'); return [{ c: 'ok', v: 'Opening GitHub profile...' }] } },
